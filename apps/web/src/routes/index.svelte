@@ -14,7 +14,7 @@
 	<h1>
 		<div class="welcome">
 
-		<h1 class="text-3xl font-bold underline">
+		<h1 class="text-3xl text-blue-700 font-bold underline">
 			Hello this is wow cool rld!
 		</h1>
 			<picture>
@@ -31,6 +31,13 @@
 	</h2>
 
 	<Counter />
+
+
+	<button class="btn btn-outline">neutral</button> 
+	<button class="btn btn-outline btn-primary">primary</button> 
+	<button class="btn btn-outline btn-secondary">secondary</button> 
+	<button class="btn btn-outline btn-accent">accent</button>
+
 </section>
 
 <style>
