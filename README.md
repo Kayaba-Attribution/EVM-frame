@@ -1,21 +1,18 @@
 <p align="center">
-  <h1 align="center">EVM-frame Build Complete Dapps FAST</h1>
+  <h1 align="center">EVM-frame, Build Complete Dapps FAST</h1>
   <h3 align="center">This is a forkable EVM dev stack build for easy understanding and speed</h3>
   <img align="center" src="https://repobeats.axiom.co/api/embed/7c2a64ade689c04cda1db4d96e99f6e308580e2b.svg" alt="Repobeats analytics image" />
 </p>
 
 # What's inside?
 
-This Turborepo includes the following packages and apps:
+This is a Turborepo that includes the following apps:
 
 ### Apps and Packages
 
 - `docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) placeholder documentation site
-- `rename-core`: core components
-- `rename-tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `eslint-preset-acme`: ESLint preset (coming soon)
-
-Each package and app is 100% [Typescript](https://www.typescriptlang.org/).
+- `web`: Svelte-kit website
+- `hardhat`: contract testing and development framework
 
 ### Utilities
 
