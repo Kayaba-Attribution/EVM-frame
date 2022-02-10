@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Turborepo SvelteKit System starter</h1>
   <h3 align="center">This is an unofficial SvelteKit monorepo starter powered by Turborepo.</h3>
-  <img align="center" src="https://repobeats.axiom.co/api/embed/ba95c2aeb60347c227dbb68d4e50a8a6c8cee6f2.svg" alt="Repobeats analytics image" />
+  <img align="center" src="https://repobeats.axiom.co/api/embed/7c2a64ade689c04cda1db4d96e99f6e308580e2b.svg" alt="Repobeats analytics image" />
 </p>
 
 # What's inside?
@@ -29,17 +29,15 @@ This turborepo has some additional tools already setup for you:
 
 Run the following command:
 
-```bash
-npx create-turbosvelte app-name
+```
+git clone https://github.com/Kayaba-Attribution/EVM-frame.git
 ```
 
-### Changing the NPM organization scope
+and
 
-The NPM organization scope for this design system starter is `@rename`. To change this, it's a bit manual at the moment, but you'll need to do the following:
-
-- Rename folders in `packages/*` to replace `rename` with your desired scope
-- Search and replace `rename` with your desired scope
-- Re-run `npm install`
+```
+npm install
+```
 
 # Contributing
 
