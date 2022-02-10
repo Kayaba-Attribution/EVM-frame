@@ -1,0 +1,49 @@
+{
+	"name": "EVM-frame",
+	"version": "1.0.0",
+	"description": "Forkable EVM dev stack build on top of Svelte and HardHat",
+	"bin": "./bin/cli.cjs",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint"
+	},
+	"devDependencies": {
+		"turbo": "latest",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0"
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Kayaba-Attribution/EVM-frame.git"
+	},
+	"author": "Kayaba-Attribution",
+	"license": "MIT",
+	"turbo": {
+		"baseBranch": "origin/main",
+		"npmClient": "npm",
+		"pipeline": {
+			"build": {
+				"dependsOn": [
+					"^build"
+				],
+				"outputs": [
+					"dist/**",
+					".build/**"
+				]
+			},
+			"lint": {
+				"outputs": []
+			},
+			"dev": {
+				"cache": false
+			}
+		}
+	},
+	"type": "module"
+}
