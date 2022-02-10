@@ -1,5 +1,5 @@
 {
-	"name": "create-sveleton",
+	"name": "@EVM-frame/sveleton",
 	"version": "1.0.0",
 	"description": "A skeleton documentation site powered by MdSvex & Svelte!",
 	"bin": "./bin/cli.cjs",

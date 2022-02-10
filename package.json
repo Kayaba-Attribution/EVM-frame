@@ -1,5 +1,5 @@
 {
-  "name": "EVM-frame",
+  "name": "@EVM-frame/monorepo",
   "version": "1.0.0",
   "description": "Forkable EVM dev stack build on top of Svelte and HardHat",
   "bin": "./bin/cli.cjs",
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "test": "npm workspace EVM-frame/frame-hardhat test"
   },
   "devDependencies": {
     "turbo": "latest",

@@ -1,5 +1,5 @@
 {
-  "name": "frame-hardhat",
+  "name": "@EVM-frame/hardhat",
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
