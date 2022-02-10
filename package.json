@@ -4,8 +4,7 @@
 	"description": "Forkable EVM dev stack build on top of Svelte and HardHat",
 	"bin": "./bin/cli.cjs",
 	"workspaces": [
-		"apps/*",
-		"packages/*"
+		"apps/*"
 	],
 	"scripts": {
 		"build": "turbo run build",
