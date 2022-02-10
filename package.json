@@ -2,6 +2,7 @@
   "name": "@EVM-frame/monorepo",
   "version": "1.0.0",
   "description": "Forkable EVM dev stack build on top of Svelte and HardHat",
+  "private": true,
   "bin": "./bin/cli.cjs",
   "workspaces": [
     "apps/*"
@@ -10,7 +11,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "test": "npm workspace EVM-frame/frame-hardhat test"
+    "chain": "yarn workspace @EVM-frame/hardhat chain",
+    "compile": "yarn workspace @EVM-frame/hardhat compile",
+    "test": "yarn workspace @EVM-frame/hardhat test"
   },
   "devDependencies": {
     "turbo": "latest",
@@ -26,7 +29,7 @@
   "license": "MIT",
   "turbo": {
     "baseBranch": "origin/main",
-    "npmClient": "npm",
+    "npmClient": "yarn",
     "pipeline": {
       "build": {
         "dependsOn": [
