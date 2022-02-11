@@ -3,15 +3,18 @@
 	import { base } from '$app/paths';
 
 	import { tweened } from 'svelte/motion';
-	import { wallet, nativeBalance, loginMetamask } from '$lib/eth';
+	import { wallet, nativeBalance, nativeBalanceUSD, loginMetamask } from '$lib/eth';
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
-
+	import { spotUSD } from '$lib/ethUtils';
+	
 	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
-	onMount(() => {
-	themeChange(false)
-	// 👆 false parameter is required for svelte
+	onMount(async () => {
+		themeChange(false)
+		// 👆 false parameter is required for svelte
 	})
+
+
 
 
 </script>
@@ -29,7 +32,7 @@
 		{#if !$wallet}
 			Connect a wallet
 		{:else}
-			<div data-tip="$---" class="tooltip tooltip-bottom">
+			<div data-tip={$nativeBalanceUSD} class="tooltip tooltip-bottom">
 				<div class="badge mr-2">
 					{$nativeBalance.toFixed(3)} ETH
 				</div>

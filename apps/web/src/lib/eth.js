@@ -1,6 +1,7 @@
 import { Web3Provider } from "@ethersproject/providers";
 import { Contract } from "@ethersproject/contracts";
 import { formatEther } from '@ethersproject/units';
+import { spotUSD } from '$lib/ethUtils';
 
 import { writable } from "svelte/store";
 
@@ -8,6 +9,7 @@ export const wallet = writable()
 export const wrongNetwork = writable(true)
 export const chain = writable('none')
 export const nativeBalance = writable(0)
+export const nativeBalanceUSD = writable(0)
 
 let provider;
 const CHAIN_ID = 31337;
@@ -56,7 +58,9 @@ export async function init() {
   const _networkDetails = await provider.getNetwork();
   chain.set(_networkDetails.chainId)
 
-  nativeBalance.set(Number(formatEther(await _signer.provider.getBalance(_wallet))));
+  const _nativeBalance = Number(formatEther(await _signer.provider.getBalance(_wallet))) 
+  nativeBalance.set(_nativeBalance);
+  nativeBalanceUSD.set((_nativeBalance * (await spotUSD("ETH"))).toFixed(2) + ' USD')
   
   if (_networkDetails.chainId !== CHAIN_ID) {
     wrongNetwork.set(true);
