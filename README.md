@@ -8,19 +8,15 @@
 
 This is a Turborepo that includes the following apps:
 
-### Apps and Packages
+### Apps
 
-- `docs`: [Sveleton](https://github.com/Brisklemonade/sveleton) placeholder documentation site
 - `web`: Svelte-kit website
 - `hardhat`: contract testing and development framework
 
-### Utilities
+### tech
 
-This turborepo has some additional tools already setup for you:
-
-- [Typescript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+https://github.com/saadeghi/theme-change
+https://daisyui.com/
 
 ## Installation
 
