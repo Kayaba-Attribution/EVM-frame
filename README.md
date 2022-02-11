@@ -6,7 +6,7 @@
 
 # What's inside?
 
-This is a Turborepo with parallel execution, that contains a Svelte-kit app for front-end, and HardHat for contract and development.
+This is a Turborepo with parallel execution, that contains a Svelte-kit app for front-end, and HardHat for contract testing and development.
 
 + Svelte unlike React or Vue that do the bulk work on the browser, compiles your app on build.
 + Svelte $reactivity triggers efficient, granular updates by assigning to local variables.  
