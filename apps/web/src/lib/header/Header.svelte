@@ -1,37 +1,59 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import { base } from '$app/paths';
+
+	import { wallet, nativeBalance } from '$lib/eth';
+
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+<div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+	<div class="px-2 mx-2 navbar-start">
+	  <span class="text-lg font-bold">
+			  EVM-frame
+	  </span>
+	</div> 
+	<div class="hidden px-2 mx-2 navbar-center lg:flex">
+	  <div class="flex items-stretch">
+		<a href="/" class="btn btn-ghost btn-sm rounded-btn">
+				Home
+			  </a> 
+		<a class="btn btn-ghost btn-sm rounded-btn">
+				Portfolio
+			  </a> 
+		<a class="btn btn-ghost btn-sm rounded-btn">
+				About
+			  </a> 
+		<a class="btn btn-ghost btn-sm rounded-btn">
+				Contact
+			  </a>
+	  </div>
+	</div> 
+	<div class="navbar-end">
+      <button class="btn btn-outline btn-xs md:btn-sm lg:btn-md xl:btn-md">
+		{#if !$wallet}
+			Connect a wallet
+		{:else}
+			<div class="badge mr-2">
+				{$nativeBalance.toFixed(3)} ETH
+			</div>
+			{$wallet.slice(0, 6)}...{$wallet.slice(-4)}
+		{/if}  
+	  </button> 
+	  <button class="btn btn-square btn-ghost">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">     
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>                     
+		</svg>
+	  </button> 
+	  <button class="btn btn-square btn-ghost">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">             
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>             
+		</svg>
+	  </button>
 	</div>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
-</header>
+  </div>
+  
 
 <style>
 	header {

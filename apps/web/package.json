@@ -26,7 +26,10 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
+    "@walletconnect/web3-provider": "^1.7.1",
     "cookie": "^0.4.1",
-    "daisyui": "^1.25.4"
+    "daisyui": "^1.25.4",
+    "ethers": "^5.5.4",
+    "web3": "^1.7.0"
   }
 }
