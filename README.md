@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">🏗️ EVM-front, Build Complete Dapps FAST 🏗️</h1>
+  <h1 align="center">🏗️⚡ EVM-front, Build Complete Dapps FAST ⚡🏗️</h1>
   <h3 align="center">This is a forkable EVM dev stack built on top of Svelte with a focus on quick product iterations, clarity, and size/speed optimization.  
 </h3>
 </p>
