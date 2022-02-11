@@ -21,18 +21,22 @@ This is a [Turborepo](https://turborepo.org/) with parallel execution, that cont
 
 ## Installation
 
-Run the following command:
+Clone this repo:
 
 ```
 git clone https://github.com/Kayaba-Attribution/EVM-frame.git
 ```
 
-and
+Add packages with yarn (ultra-fast thanks to Turborepo)
 
 ```
-npm install
+yarn install
 ```
+Start front-end:
 
+```
+yarn dev
+```
 # Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
