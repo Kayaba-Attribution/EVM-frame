@@ -1,40 +1,37 @@
 {
-  "name": "@EVM-frame/hardhat",
+  "name": "hardhats",
   "version": "1.0.0",
-  "license": "MIT",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-prettier": "^3.4.0"
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "chai": "^4.3.6",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-promise": "^5.2.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.8.4",
+    "hardhat-gas-reporter": "^1.0.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.7.19"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
-    "@nomiclabs/hardhat-waffle": "^2.0.0",
-    "@openzeppelin/contracts": "^4.4.2",
-    "@tenderly/hardhat-tenderly": "^1.0.10",
-    "@nomiclabs/hardhat-etherscan": "^2.1.7",
-    "chai": "^4.2.0",
-    "chalk": "^4.1.0",
-    "dotenv": "^8.2.0",
-    "ethereum-waffle": "^3.1.1",
-    "ethers": "^5.4.4",
-    "hardhat": "2.6.0"
-  },
-  "scripts": {
-    "chain": "hardhat node --network hardhat",
-    "compile": "hardhat compile",
-    "test": "hardhat test --network hardhat",
-    "fork": "hardhat node --no-deploy --network hardhat --fork https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad",
-    "deploy": "hardhat deploy --export-all ../react-app/src/contracts/hardhat_contracts.json",
-    "postdeploy": "hardhat run scripts/publish.js",
-    "watch": "node scripts/watch.js",
-    "accounts": "hardhat accounts",
-    "balance": "hardhat balance",
-    "send": "hardhat send",
-    "generate": "hardhat generate",
-    "account": "hardhat account",
-    "verify": "hardhat etherscan-verify --api-key PSW8C433Q667DVEX5BCRMGNAH9FSGFZ7Q8"
+    "@openzeppelin/contracts": "^4.5.0"
   }
 }

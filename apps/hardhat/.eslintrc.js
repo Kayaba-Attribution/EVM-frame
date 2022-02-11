@@ -1,23 +1,22 @@
 module.exports = {
   env: {
+    browser: false,
+    es2021: true,
     mocha: true,
+    node: true,
   },
-  extends: ["airbnb", "plugin:prettier/recommended"],
-  plugins: ["babel"],
-  rules: {
-    "prettier/prettier": ["error"],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        ts: "never",
-      },
-    ],
-    "import/prefer-default-export": "off",
-    "prefer-destructuring": "off",
-    "prefer-template": "off",
-    "no-console": "off",
-    "func-names": "off",
+  extends: [
+    "standard",
+    "plugin:prettier/recommended",
+    "plugin:node/recommended",
+  ],
+  parserOptions: {
+    ecmaVersion: 12,
   },
+  overrides: [
+    {
+      files: ["hardhat.config.js"],
+      globals: { task: true },
+    },
+  ],
 };
