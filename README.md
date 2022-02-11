@@ -6,7 +6,7 @@
 
 # What's inside?
 
-This is a Turborepo with parallel execution, that contains a Svelte-kit app for front-end, and HardHat for contract testing and development.
+This is a [Turborepo](https://turborepo.org/) with parallel execution, that contains a [Svelte-kit](https://kit.svelte.dev/) app and [daisyui](https://daisyui.com/) for front-end, and [HardHat](https://hardhat.org/) for contract testing and development.
 
 + Svelte unlike React or Vue that do the bulk work on the browser, compiles your app on build.
 + Svelte $reactivity triggers efficient, granular updates by assigning to local variables.  
@@ -18,9 +18,6 @@ This is a Turborepo with parallel execution, that contains a Svelte-kit app for 
 - `hardhat`: contract testing and development framework
 
 ### tech
-
-https://github.com/saadeghi/theme-change
-https://daisyui.com/
 
 ## Installation
 
