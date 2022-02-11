@@ -7,7 +7,7 @@ import { writable } from "svelte/store";
 export const wallet = writable()
 export const wrongNetwork = writable(true)
 export const chain = writable('none')
-export const nativeBalance = writable()
+export const nativeBalance = writable(0)
 
 let provider;
 const CHAIN_ID = 31337;
@@ -57,7 +57,6 @@ export async function init() {
   chain.set(_networkDetails.chainId)
 
   nativeBalance.set(Number(formatEther(await _signer.provider.getBalance(_wallet))));
-  console.log(Number(formatEther(await _signer.provider.getBalance(_wallet))))
   
   if (_networkDetails.chainId !== CHAIN_ID) {
     wrongNetwork.set(true);
