@@ -3,68 +3,44 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import { onMount } from 'svelte'
+	import { themeChange } from 'theme-change'
+
+	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
+	onMount(() => {
+	themeChange(false)
+	// 👆 false parameter is required for svelte
+	})
+	import { loginMetamask, init, pickNetwork, wallet, chain } from "$lib/eth";
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-
-		<h1 class="text-3xl text-blue-700 font-bold underline">
-			Hello this is wow cool rld!
-		</h1>
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
 
 
-	<button class="btn btn-outline">neutral</button> 
-	<button class="btn btn-outline btn-primary">primary</button> 
-	<button class="btn btn-outline btn-secondary">secondary</button> 
-	<button class="btn btn-outline btn-accent">accent</button>
+<h1>Welcome {$wallet} on chain {$chain}</h1>
 
-</section>
+<label for="my-modal-2" class="btn btn-outline btn-xs md:btn-sm lg:btn-md xl:btn-md modal-button">open modal</label> 
+<input type="checkbox" id="my-modal-2" class="modal-toggle"> 
+<div class="modal">
+	<div class="modal-box">
+	<p>Please Connect Your Wallet</p> 
+	<div class="modal-action">
+		<label for="my-modal-2" class="btn btn-circle">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">   
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>                       
+		</svg>
+		</label> 
+	</div>
+	</div>
+</div>
+
+
+
+
+
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
