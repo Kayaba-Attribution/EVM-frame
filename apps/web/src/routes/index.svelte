@@ -3,24 +3,13 @@
 </script>
 
 <script>
-	import { onMount } from 'svelte'
-	import { themeChange } from 'theme-change'
-
-	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
-	onMount(() => {
-		themeChange(false)
-		// 👆 false parameter is required for svelte
-	})
-	import { loginMetamask, init, pickNetwork, wallet, chain } from "$lib/eth";
+	import { wallet, chain } from "$lib/eth";
 	import { spotUSD } from '$lib/ethUtils';
-
-
-
 
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>ETH-front Home</title>
 </svelte:head>
 
 
@@ -28,7 +17,7 @@
 <h1>Welcome {$wallet} on chain {$chain}</h1>
 
 
-<button on:click={async () => spotUSD("ETH")} class="btn btn-info">info</button> 
+<button on:click={async () => spotUSD("ETH")} class="btn btn-info">Update ETH price</button> 
 
 <label for="my-modal-2" class="btn btn-outline btn-xs md:btn-sm lg:btn-md xl:btn-md modal-button">open modal</label> 
 <input type="checkbox" id="my-modal-2" class="modal-toggle"> 

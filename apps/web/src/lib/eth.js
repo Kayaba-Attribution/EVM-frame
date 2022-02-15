@@ -10,6 +10,8 @@ export const wrongNetwork = writable(true)
 export const chain = writable('none')
 export const nativeBalance = writable(0)
 export const nativeBalanceUSD = writable(0)
+export const signer = writable();
+
 
 let provider;
 const CHAIN_ID = 31337;
@@ -25,7 +27,6 @@ export function loginMetamask() {
         console.error(err);
       }
     });
-
   init();
 }
 
@@ -52,6 +53,7 @@ export async function init() {
   }
 
   const _signer = await provider.getSigner();
+  signer.set(_signer);
   const _wallet = await _signer.getAddress();
   wallet.set(_wallet);
 
