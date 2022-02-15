@@ -33,6 +33,7 @@ Add packages with yarn (ultra-fast thanks to Turborepo)
 yarn install
 ```
 Start front-end:
+Yarn dev
 
 ```
 yarn dev
