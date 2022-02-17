@@ -14,6 +14,9 @@ const config: HardhatUserConfig = {
         version: '0.8.0',
       },
       {
+        version: '0.8.1',
+      },
+      {
       version: '0.7.6',
       }
     ]
@@ -32,12 +35,17 @@ const config: HardhatUserConfig = {
     david: 4,
     tokenOwner: {
       default: 5,
-      "mumbai":'0x0000000000591b1DA6B179D1dA1ee31AFAE473e5'
+      "mumbai":'0x0000000000591b1DA6B179D1dA1ee31AFAE473e5',
+      "meter":'0x0000000000591b1DA6B179D1dA1ee31AFAE473e5',
     },
   },
   networks: {
     rinkeby: {
       url: `https://speedy-nodes-nyc.moralis.io/${process.env.MORALIS_SPEEDYNODES_KEY}/eth/rinkeby`, 
+      accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
+    },
+    meter: {
+      url: 'https://rpctest.meter.io',
       accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
     },
     kovan: {
