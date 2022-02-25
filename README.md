@@ -49,6 +49,8 @@ Start front-end:
 yarn dev
 ```
 
+### One click deployment
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard&redirect-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard)
 ## Easy Setup
 
 go to `apps/web/src/lib/setup.json`
