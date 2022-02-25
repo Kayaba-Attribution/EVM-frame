@@ -29,6 +29,25 @@ This branch provides an easy to deploy dashboard app for DAOs that want to showc
 + Metamask Wallet Connection
   + TODO: create donation section to allow users to send to safe
   + TODO: Parse all addresses on the data to get the ENS name
+  
+## Installation
+
+Clone this repo:
+
+```
+git clone --single-branch --branch gnosis-dao-dashboard https://github.com/Kayaba-Attribution/EVM-frame.git
+```
+
+Add packages with yarn
+
+```
+yarn install
+```
+Start front-end:
+
+```
+yarn dev
+```
 
 ## Easy Setup
 
@@ -77,27 +96,9 @@ This is a [Turborepo](https://turborepo.org/) with parallel execution, that cont
 - `web`: Svelte-kit website
 - `hardhat`: contract testing and development framework
 
-## Installation
 
-Clone this repo:
 
-```
-git clone https://github.com/Kayaba-Attribution/EVM-frame.git
-```
-
-Add packages with yarn
-
-```
-yarn install
-```
-Start front-end:
-
-```
-yarn dev
-```
 # Contributing info
-
-
 Pull requests are welcome!
 
 # License
