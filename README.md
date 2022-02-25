@@ -49,8 +49,7 @@ Start front-end:
 yarn dev
 ```
 
-### One click deployment
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard&redirect-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard)
+
 ## Easy Setup
 
 go to `apps/web/src/lib/setup.json`
@@ -71,6 +70,14 @@ Fill in the data with your needs
 }
 ```
 Under `web/static` add your logo img
+
+### Vercel Deployment
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard&redirect-url=https%3A%2F%2Fgithub.com%2FKayaba-Attribution%2FEVM-frame%2Ftree%2Fgnosis-dao-dashboard)
+
+####Build will fail. Go to project settings and set the following:
+![settingFramework](https://user-images.githubusercontent.com/63566185/155753210-149feb34-76d7-4170-b863-6c96ef51e34d.png)
+![settingsRootDir](https://user-images.githubusercontent.com/63566185/155753222-4f9ecfa0-7178-4060-be07-1f09198b544b.png)
+
 
 ### Mobile (Looks better but the capture software makes it look choppy)
 ![dark](https://user-images.githubusercontent.com/63566185/155744898-e2ce3019-36b9-4e41-b1bf-391dbfa2e6bc.png)
