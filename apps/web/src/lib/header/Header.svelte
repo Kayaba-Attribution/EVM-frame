@@ -7,6 +7,8 @@
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
 	import { spotUSD } from '$lib/ethUtils';
+	import setup from "../../lib/setup.json"
+
 
 
 	// NOTE: the element that is using one of the theme attributes must be in the DOM on mount
@@ -26,9 +28,9 @@
 
 <div class="navbar my-4 mx-4 shadow-lg bg-neutral text-neutral-content rounded-box">
   <div class="flex-1 px-2 mx-1">
-	<img src="./padawan.png" class="w-10 mr-4" alt="">
+	<img src="./{setup.logo}" class="w-10 mr-4" alt="">
     <span class="text-lg font-bold">
-		PDAO
+		{setup.symbol}
 		<!-- {innerWidth > 798 ? 'PadawanDAO' : 'PDAO'} -->
     </span>
   </div> 
