@@ -42,11 +42,11 @@ const config: HardhatUserConfig = {
   networks: {
     rinkeby: {
       url: `https://speedy-nodes-nyc.moralis.io/${process.env.MORALIS_SPEEDYNODES_KEY}/eth/rinkeby`, 
-      accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
+      //accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
     },
     meter: {
       url: 'https://rpctest.meter.io',
-      accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
+      //accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
     },
     kovan: {
       url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXX/eth/kovan", 
@@ -86,7 +86,7 @@ const config: HardhatUserConfig = {
     },
     mumbai: {
       url: `https://speedy-nodes-nyc.moralis.io/${process.env.MORALIS_SPEEDYNODES_KEY}/polygon/mumbai`, 
-      accounts: [`${process.env.MUMBAI_DEPLOYER_KEY}`],
+      //accounts: [`${process.env.MUMBAI_DEPLOYER_KEY}`],
       gasPrice: 3200000000,
     },
     mainnetAvalanche: {

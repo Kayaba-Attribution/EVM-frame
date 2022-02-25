@@ -30,6 +30,7 @@
     "cookie": "^0.4.1",
     "daisyui": "^1.25.4",
     "ethers": "^5.5.4",
+    "svelte-typewriter": "^3.0.0-alpha.11",
     "theme-change": "^2.0.2",
     "web3": "^1.7.0"
   }
