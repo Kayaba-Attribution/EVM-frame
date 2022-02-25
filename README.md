@@ -51,6 +51,19 @@ Fill in the data with your needs
 ```
 Under `web/static` add your logo img
 
+### Mobile (Looks better but the capture software makes it look choppy)
+![dark](https://user-images.githubusercontent.com/63566185/155744898-e2ce3019-36b9-4e41-b1bf-391dbfa2e6bc.png)
+![wire](https://user-images.githubusercontent.com/63566185/155744972-da530073-ffd2-4f78-997d-c97d1e257676.png)
+![soft](https://user-images.githubusercontent.com/63566185/155744750-3af9f9d0-9aaa-481b-bb5a-fadca6d2162a.png)
+![retro](https://user-images.githubusercontent.com/63566185/155745190-fda44668-610d-48b1-839a-463cd79543d5.png)
+
+### Images:
+![dark](https://user-images.githubusercontent.com/63566185/155744518-6b666081-e248-400d-89bd-3eab8e47c02a.png)
+![wire](https://user-images.githubusercontent.com/63566185/155744529-aa36878c-d9b7-4fdb-be0c-a4a6b37b9796.png)
+![retro](https://user-images.githubusercontent.com/63566185/155744539-4fcc9b0d-7755-43f1-97d3-891bcf5e061b.png)
+![soft](https://user-images.githubusercontent.com/63566185/155744544-099d8b61-28d2-453a-95a5-667fa2d18488.png)
+
+
 ## What's inside?
 
 This is a [Turborepo](https://turborepo.org/) with parallel execution, that contains a [Svelte-kit](https://kit.svelte.dev/) app and [daisyui](https://daisyui.com/) for front-end, and [HardHat](https://hardhat.org/) for contract testing and development.
