@@ -19,8 +19,7 @@ export const balances = writable([])
 
 
 let provider;
-const CHAIN_ID = 1;
-const CHAIN_HEX = '0x'+CHAIN_ID.toString(16);
+const CHAIN_ID = 31337;
 
 let _metamaskReady = () => {};
 
@@ -113,6 +112,6 @@ export async function init() {
   _metamaskReady()
 }
 
-export async function pickNetwork() {
-  await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: CHAIN_HEX }] })
+export async function pickNetwork(chainHexa) {
+  await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: chainHexa }] });
 }

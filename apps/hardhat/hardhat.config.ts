@@ -28,8 +28,14 @@ const config: HardhatUserConfig = {
       4: '0xA296a3d5F026953e17F472B497eC29a5631FB51B', // but for rinkeby it will be a specific address
       "rinkeby": '0x0000000000591b1DA6B179D1dA1ee31AFAE473e5',
       "mumbai": '0x0000000000591b1DA6B179D1dA1ee31AFAE473e5',
+      "evmos": '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+      "bscTEST": '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
     },
-    bob: 1,
+    bob: {
+      default: 1,
+      "evmos": '0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199',
+      "bscTEST": '0x0000000000591b1DA6B179D1dA1ee31AFAE473e5'
+    },
     alice: 2,
     charlie: 3,
     david: 4,
@@ -44,9 +50,17 @@ const config: HardhatUserConfig = {
       url: `https://speedy-nodes-nyc.moralis.io/${process.env.MORALIS_SPEEDYNODES_KEY}/eth/rinkeby`, 
       //accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
     },
+    bscTEST: {
+      url: `https://speedy-nodes-nyc.moralis.io/aaf5f27c6c7a9ad182a69ccd/bsc/testnet`, 
+      accounts: ['ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80', 'df57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e']
+    },
     meter: {
       url: 'https://rpctest.meter.io',
       //accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`]
+    },
+    evmos: {
+      url: 'https://evmos-archive-testnet.api.bdnodes.net:8545',
+      accounts: [`${process.env.RINKEBY_DEPLOYER_KEY}`, 'df57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e']
     },
     kovan: {
       url: "https://speedy-nodes-nyc.moralis.io/XXXXXXXXXXXXXXXXXXXXXXX/eth/kovan", 
